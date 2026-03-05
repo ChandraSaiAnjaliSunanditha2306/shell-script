@@ -2,6 +2,6 @@
 
 movies=("rrr" "abc" "xyz")
 
-echo "first movie : ${movie[0]}"
-echo "second movie : ${movie[1]}"
-echo "All movies : ${movie[@]}"
+echo "first movie : ${movies[0]}"
+echo "second movie : ${movies[1]}"
+echo "All movies : ${movies[@]}"
