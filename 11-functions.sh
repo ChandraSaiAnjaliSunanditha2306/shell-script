@@ -34,3 +34,4 @@ then
     VALIDATE $? "Installing git"
 else
     echo "git already installed"
+fi
