@@ -26,6 +26,7 @@ then
 
 else
     echo "MYSQL already installed"
+fi
 
 dnf list installed git
 if [ $? -ne 0 ]
