@@ -21,7 +21,7 @@ VALIDATE(){
 
 if [ $USERID -ne 0 ]
 then
-    echo " ERROR: you must have sudo access"
+    echo " ERROR: you must have sudo access" &>>LOG_FILE_NAME
     exit 1
 fi
 
@@ -32,13 +32,13 @@ then
    VALIDATE $? "Installing MYSQL"
 
 else
-    echo -e "MYSQL already $Y installed"
+    echo -e "MYSQL already $Y installed" &>>LOG_FILE_NAME
 fi
 
 dnf list installed git
 if [ $? -ne 0 ]
 then
-    dnf install git -y 
+    dnf install git -y &>>LOG_FILE_NAME
     VALIDATE $? "Installing git"
 else
     echo -e "git already $Y installed"
