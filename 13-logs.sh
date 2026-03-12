@@ -6,7 +6,7 @@ R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
 LOG_FOLDER="/var/log/script.logs"
-LOG_FILE="$(echo $0)
+LOG_FILE=$(echo $0)
 TIMESTAMP=$(date +%Y-%m-%d-%H-%M-%S)
 LOG_FILE_NAME=($LOG_FOLDER/$LOG_FILE-$TIMESTAMP)
 VALIDATE(){
